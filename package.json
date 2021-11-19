@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/MartynasKupsys/scss-card-tutorial/issues"
   },
-  "homepage": "https://github.com/MartynasKupsys/scss-card-tutorial#readme"
+  "homepage": "https://github.com/MartynasKupsys/scss-card-tutorial#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
 }
