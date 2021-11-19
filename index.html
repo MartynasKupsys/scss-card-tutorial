@@ -11,35 +11,40 @@
     <link rel="stylesheet" href="output.css">
     <title>SCSS card tutorial</title>
 </head>
-<body>
-    <div id="card">
+<body class="bg-secondary d-flex container-fluid justify-content-center align-items-center min-vh-100 text-white">
+    <div id="card" class="bg-dark d-flex rounded-3 overflow-hidden">
 
-        <div id="card-text">
-            <h1>Get insights that help your business grow.</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, inventore, nulla porro corrupti, qui molestias commodi tempora nobis nam laboriosam laborum ratione dignissimos. Quae, sunt aliquam pariatur exercitationem sit atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus qui ipsa odio dolorem cum. Debitis repudiandae nostrum molestias dicta expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident ullam assumenda asperiores nihil id eum, temporibus consequuntur maxime officiis?</p>
+        <div id="card-text" class="col-6 p-5 d-flex flex-column justify-content-between">
 
-            <div id="stats">
-                <div>
-                    <p>10k+</p>
-                    <p>COMPANIES</p>
+            <!-- <div class="flex-fill"> -->
+                <div class="">
+                <h1>Get insights that help your business grow.</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, inventore, nulla porro corrupti, qui molestias commodi tempora nobis nam laboriosam laborum ratione dignissimos. Quae, sunt aliquam pariatur exercitationem sit atque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus qui ipsa odio dolorem cum.</p>
+            </div>
+            
+
+            <div id="stats" class="d-flex justify-content-between w-100">
+                <div class="d-flex flex-column">
+                    <p class="fw-bold fs-2">10k+</p>
+                    <p >COMPANIES</p>
                 </div>
-                <div>
-                    <p>314</p>
+                <div class="d-flex flex-column">
+                    <p class="fw-bold fs-2">314</p>
                     <p>TEMPLATES</p>
                 </div>
-                <div>
-                    <p>12M+</p>
+                <div class="d-flex flex-column">
+                    <p class="fw-bold fs-2">12M+</p>
                     <p>QUERIES</p>
                 </div>
             </div>
 
         </div>
 
-        <div id="card-image">
-            <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="office-image">
+        <div id="card-image" class="col-6 overflow-hidden rounded-end">
+            <img class="img-fluid col-12 h-100" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="office-image">
         </div>
     </div>
-    
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
