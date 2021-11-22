@@ -1,11 +1,115 @@
-body {
-    background-color: bisque;
-    h1 {
-        color: brown;
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+// $fontSizes: 40px, 50px, 80px;
+
+// @each $size in $fontSizes {
+//     .fs-#{$size} {
+//         font-size: $size;
+//     }
+// }
+
+$baseFontSize: 1.5rem;
+
+@for $i from 1 through 6 {
+    .fs-#{$i} {
+        font-size: $baseFontSize / $i + 1rem;
+        line-height: $baseFontSize / $i + 1.2rem;
     }
 }
 
-p {
-    background-color: brown;
-    // font-size: 30px;
+$baseSize: 5px;
+
+@for $i from 0 through 5 {
+    .m-#{$i} {
+        margin: $baseSize * $i;
+    }
+
+    .mb-#{$i} {
+        margin-bottom: $baseSize * $i;
+    }
+
+    .mt-#{$i} {
+        margin-top: $baseSize * $i;
+    }
+
+    .ms-#{$i} {
+        margin-left: $baseSize * $i;
+    }
+
+    .me-#{$i} {
+        margin-right: $baseSize * $i;
+    }
+
+    .mx-#{$i} {
+        margin-left: $baseSize * $i;
+        margin-right: $baseSize * $i;
+    }
+
+    .my-#{$i} {
+        margin-top: $baseSize * $i;
+        margin-bottom: $baseSize * $i;
+    }
 }
+
+//map'as kaip masyvas
+
+$breakpoints: (
+    "xs": 0, 
+    "sm": 576px, 
+    "md": 768px, 
+    "lg": 992px, 
+    "xl": 1200px,
+    "xxl": 1400px
+    );
+
+// einama per visus key => value poras
+@each $name, $value in $breakpoints {
+    .flex-#{$name}-row {
+        @media only screen and (min-width: $value) {
+            flex-direction: row;
+        }
+    }
+
+    .flex-#{$name}-column {
+        @media only screen and (min-width: $value) {
+            flex-direction: column;
+        }
+    }
+
+    .align-items-#{$name}-start {
+        @media only screen and (min-width: $value) {
+            align-items: start;
+        }
+    }
+}
+
+@each $name, $value in $breakpoints {
+
+    @for $i from 1 through 12 {
+        .col-#{$name}-#{$i} {
+            @media only screen and (min-width: $value) {
+                // align-items: start;
+                width: 100% / 12 * $i;
+            }
+            
+        }
+    }
+
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+
