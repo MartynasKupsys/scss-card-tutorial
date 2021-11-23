@@ -1,115 +1,339 @@
-.d-flex {
-    display: flex;
-    flex-direction: row;
-}
+// .d-flex {
+//     display: flex;
+//     flex-direction: row;
+// }
 
-.flex-column {
-    flex-direction: column;
-}
+// .flex-column {
+//     flex-direction: column;
+// }
 
-// $fontSizes: 40px, 50px, 80px;
+// // $fontSizes: 40px, 50px, 80px;
 
-// @each $size in $fontSizes {
-//     .fs-#{$size} {
-//         font-size: $size;
+// // @each $size in $fontSizes {
+// //     .fs-#{$size} {
+// //         font-size: $size;
+// //     }
+// // }
+
+// $baseFontSize: 1.5rem;
+
+// @for $i from 1 through 6 {
+//     .fs-#{$i} {
+//         font-size: $baseFontSize / $i + 1rem;
+//         line-height: $baseFontSize / $i + 1.2rem;
 //     }
 // }
 
-$baseFontSize: 1.5rem;
+// $baseSize: 5px;
 
-@for $i from 1 through 6 {
-    .fs-#{$i} {
-        font-size: $baseFontSize / $i + 1rem;
-        line-height: $baseFontSize / $i + 1.2rem;
-    }
-}
+// @for $i from 0 through 5 {
+//     .m-#{$i} {
+//         margin: $baseSize * $i;
+//     }
 
-$baseSize: 5px;
+//     .mb-#{$i} {
+//         margin-bottom: $baseSize * $i;
+//     }
 
-@for $i from 0 through 5 {
-    .m-#{$i} {
-        margin: $baseSize * $i;
-    }
+//     .mt-#{$i} {
+//         margin-top: $baseSize * $i;
+//     }
 
-    .mb-#{$i} {
-        margin-bottom: $baseSize * $i;
-    }
+//     .ms-#{$i} {
+//         margin-left: $baseSize * $i;
+//     }
 
-    .mt-#{$i} {
-        margin-top: $baseSize * $i;
-    }
+//     .me-#{$i} {
+//         margin-right: $baseSize * $i;
+//     }
 
-    .ms-#{$i} {
-        margin-left: $baseSize * $i;
-    }
+//     .mx-#{$i} {
+//         margin-left: $baseSize * $i;
+//         margin-right: $baseSize * $i;
+//     }
 
-    .me-#{$i} {
-        margin-right: $baseSize * $i;
-    }
-
-    .mx-#{$i} {
-        margin-left: $baseSize * $i;
-        margin-right: $baseSize * $i;
-    }
-
-    .my-#{$i} {
-        margin-top: $baseSize * $i;
-        margin-bottom: $baseSize * $i;
-    }
-}
+//     .my-#{$i} {
+//         margin-top: $baseSize * $i;
+//         margin-bottom: $baseSize * $i;
+//     }
+// }
 
 //map'as kaip masyvas
 
-$breakpoints: (
-    "xs": 0, 
-    "sm": 576px, 
-    "md": 768px, 
-    "lg": 992px, 
-    "xl": 1200px,
-    "xxl": 1400px
-    );
+// $breakpoints: (
+//     "xs": 0, 
+//     "sm": 576px, 
+//     "md": 768px, 
+//     "lg": 992px, 
+//     "xl": 1200px,
+//     "xxl": 1400px
+//     );
 
 // einama per visus key => value poras
-@each $name, $value in $breakpoints {
-    .flex-#{$name}-row {
-        @media only screen and (min-width: $value) {
-            flex-direction: row;
-        }
-    }
+// @each $name, $value in $breakpoints {
+//     .flex-#{$name}-row {
+//         @media only screen and (min-width: $value) {
+//             flex-direction: row;
+//         }
+//     }
 
-    .flex-#{$name}-column {
-        @media only screen and (min-width: $value) {
-            flex-direction: column;
-        }
-    }
+//     .flex-#{$name}-column {
+//         @media only screen and (min-width: $value) {
+//             flex-direction: column;
+//         }
+//     }
 
-    .align-items-#{$name}-start {
-        @media only screen and (min-width: $value) {
-            align-items: start;
-        }
-    }
-}
+//     .align-items-#{$name}-start {
+//         @media only screen and (min-width: $value) {
+//             align-items: center;
+//         }
+//     }
+// }
 
-@each $name, $value in $breakpoints {
+// @each $name, $value in $breakpoints {
 
-    @for $i from 1 through 12 {
-        .col-#{$name}-#{$i} {
-            @media only screen and (min-width: $value) {
-                // align-items: start;
-                width: 100% / 12 * $i;
-            }
+//     @for $i from 1 through 12 {
+//         .col-#{$name}-#{$i} {
+//             @media only screen and (min-width: $value) {
+//                 // align-items: center;
+//                 width: 100% / 12 * $i;
+//             }
             
-        }
+//         }
+//     }
+
+// }
+
+// .w-100 {
+//     width: 100%;
+// }
+
+// .h-100 {
+//     height: 100%;
+// }
+
+// colors
+body {
+    color: white;
+}
+
+$background-color: #0a0b1b;
+$card-color: #1b1937;
+$text-color: #a55dcf;
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  $baseFontSize: 1.5rem;
+  
+  @for $i from 1 through 6 {
+    .fs-#{$i} {
+      font-size: $baseFontSize / $i + 1rem;
+      line-height: $baseFontSize / $i + 1.2rem;
+    }
+  }
+  
+  $baseSize: 8px;
+  
+  @for $i from 0 through 5 {
+    .m-#{$i} {
+      margin: $baseSize * $i;
+    }
+    .mb-#{$i} {
+      margin-bottom: $baseSize * $i;
+    }
+    .mt-#{$i} {
+      margin-top: $baseSize * $i;
+    }
+    .ms-#{$i} {
+      margin-left: $baseSize * $i;
+    }
+    .me-#{$i} {
+      margin-right: $baseSize * $i;
+    }
+    .mx-#{$i} {
+      margin-left: $baseSize * $i;
+      margin-right: $baseSize * $i;
+    }
+    .my-#{$i} {
+      margin-top: $baseSize * $i;
+      margin-bottom: $baseSize * $i;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .p-#{$i} {
+      padding: $baseSize * $i;
+    }
+    .pb-#{$i} {
+      margin-bottom: $baseSize * $i;
+    }
+    .pt-#{$i} {
+      padding-top: $baseSize * $i;
+    }
+    .ps-#{$i} {
+      padding-left: $baseSize * $i;
+    }
+    .pe-#{$i} {
+      padding-right: $baseSize * $i;
+    }
+    .px-#{$i} {
+      padding-left: $baseSize * $i;
+      padding-right: $baseSize * $i;
+    }
+    .py-#{$i} {
+      padding-top: $baseSize * $i;
+      padding-bottom: $baseSize * $i;
+    }
+  }
+  
+  .flex-column {
+    flex-direction: column;
+  }
+  
+  $breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+  );
+  
+  @each $name, $value in $breakpoints {
+    .flex-#{$name}-row {
+      @media only screen and (min-width: $value) {
+        flex-direction: row;
+      }
+    }
+  
+    .flex-#{$name}-column {
+      @media only screen and (min-width: $value) {
+        flex-direction: column;
+      }
+    }
+  
+    .align-items-#{$name}-start {
+      @media only screen and (min-width: $value) {
+        align-items: start;
+      }
     }
 
-}
+    @for $i from 0 through 5 {
+        .mb-#{$name}-#{$i} {
+          @media only screen and (min-width: $value) {
+            margin-bottom: $baseSize * $i;
+          }
+        }
+      }
 
-.w-100 {
+  }
+
+//   .mg-lg-0 {
+
+//   }
+
+  
+
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+
+  .justify-content-center {
+    justify-content: center;
+  }
+
+//   .align-items-center {
+//       align-items: center;
+//   }
+  
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: 100% / 12 * $i;
+    }
+  }
+
+  $palette: (
+    "midnightblue": #1b1937,
+    "darkslateblue": #5f3158,
+    "indianred": #a54c65,
+    "white": white
+    // 4: #de7762,
+    // 5: #fcb35c,
+    // 6: #f9f871,
+  );
+
+  @each $name, $value in $palette {
+    .color-#{$name} {
+        color: $value;
+    }
+    .bg-#{$name} {
+        background-color: $value;
+    }
+  }
+  
+  $breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+  );
+  
+  @each $name, $value in $breakpoints {
+    @for $i from 1 through 12 {
+      .col-#{$name}-#{$i} {
+        @media only screen and (min-width: $value) {
+          width: 100% / 12 * $i;
+        }
+      }
+    }
+  }
+  
+  .w-100 {
     width: 100%;
-}
-
-.h-100 {
+  }
+  
+  .h-100 {
     height: 100%;
-}
+  }
+  
+  .fw-bold {
+    font-weight: bold;
+  }
 
+  .min-vh-100 {
+      min-height: 100vh;
+  }
+
+  .w-75 {
+      width: 75%;
+  }
+
+//   .flex-column-reverse {
+//       flex-direction: column-reverse;
+//   }
+
+  .overflow-hidden {
+      overflow: hidden;
+  }
+
+  $borderRadiusBase: 2px;
+
+  @for $i from 0 through 5 {
+      .rounded-#{$i} {
+          border-radius: $borderRadiusBase * $i;
+      }
+  }
+
+  
+  
 
